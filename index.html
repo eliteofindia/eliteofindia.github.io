@@ -1,191 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elite of India</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,600,700,800' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300,200' rel='stylesheet' type='text/css'>
-<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
-<link href="css/responsive.css" rel="stylesheet" media="screen" type="text/css"/>
-<link rel="stylesheet" href="sidr/stylesheets/jquery.sidr.dark.css">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<script src="js/jquery.min.js"></script>
-<script src="sidr/jquery.sidr.min.js"></script>
-<script type="text/javascript" src="js/smoothscroll.js"></script>
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MovieController">
+  <head>
+    <title ng-bind="'ELITE - ' + details.Title"></title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+  </head>
 
-</head>
+  <body>
+    <div class="container-fluid outerdiv">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+			<img class="navbar-brand" src = "images/EliteOfIndia.JPG" height="50px" width="50px"/> 
+			<a class="navbar-brand" href="#"> <b>ELITE</b> <span class="span-style">Movie Surfer</span></a>
+          </div>
+        </div>
+      </nav>
 
-<body>
-	<div class="header">
-		<!--<img src = "images/EliteOfIndia.JPG" height="80px" width="80px"/>-->
-    	<div class="container">
-		
-    		<div class="logo-menu">
-        		<div class="logo">
-				<img src = "images/EliteOfIndia.JPG" height="80px" width="80px"/>
-				<span class="quotes"> Inspire by vision </span>
-					<!--<h1><a href="#">EliteOfIndia</a><p class="quotes"> Inspire by vision </p></h1>-->
-				</div>
-                <!--<a id="simple-menu" href="#sidr">Toggle menu</a>-->
-                <div id="mobile-header">
-<a class="responsive-menu-button" href="#"><img src="images/11.png"/></a>
-</div>
-            	<div class="menu" id="navigation">
-            		<ul>
-                    	<li><a href="#">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#stories">Threads</a></li>
-                        <li><a href="#contact">Contact</a></li>
-						<li><a href="#contact">+Add</a></li>
-                    </ul>
-            	</div>
-        	</div>
-        </div>
-    </div>
-    
-    <div class="banner">
-    	<div class="container">
-        	<div class="header-text">
-            	<p class="big-text">Let's Give A New Shape To India</p>
-                <h2>We Need Your Creative Thoughts</h2>
-                <p class="small-text">A Try To Make India Corruption Free By <a href="#">EliteOFIndia </a> and Your Support</p>
-                <div class="button-section">
-                	<ul>
-                    	<li><a href="#" class="top-button green">Coming Soon...</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="color-border">
-    </div>
-    
-    <div class="desc">
-    	<div class="container">
-        	<h2>Elite Of India</h2>
-            <p>Only We Can Resolve Common Issues of Indian Society...</p>
-        </div>
-    </div>
-    
-    <div class="features" id="features">
-    	<div class="container">
-        	<h3 class="text-head">Requests From EliteOfIndia</h3>
-        	<div class="features-section">
-                <ul>
-                	<li>
-                    	<div class="feature-icon icon1"></div>
-                     	<h4>Positivity</h4>
-                        <p></p>
-                     </li>
-                     <li>
-                    	<div class="feature-icon icon2"></div>
-                     	<h4>Thoughts</h4>
-                        <p></p>
-                     </li>
-                     <li>
-                    	<div class="feature-icon icon3"></div>
-                     	<h4>Society</h4>
-                        <p></p>
-                     </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="stories" id="stories">
-    	<div class="container">
-        	<h3 class="text-head">Issues of India</h3>
-            <p class="box-desc">We are comming soon...</p>
-        	<div class="stories-section">
-            	<ul>
-                	<li>
-                    	<a href="#">
-                    	<div class="story-img"><img src="images/story1.png"/></div>
-                        	<div class="story-box">
-                            	<h4>This is elite of india</h4>
-                        		<p>We are comming soon...</p>
-                        		
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                    	<a href="#">
-                    	<div class="story-img"><img src="images/story2.png"/></div>
-                        	<div class="story-box">
-                            	<h4>This is Awesome</h4>
-                        		<p>We are comming soon...</p>
-                        		
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                    	<a href="#">
-                    	<div class="story-img"><img src="images/story3.png"/></div>
-                        	<div class="story-box">
-                            	<h4>This is Mind-blowing</h4>
-                        		<p>We are comming soon...</p>
-                        		
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-   	
-    <div class="contact" id="contact">
-    	<div class="container">
-        	<h3 class="text-head">Ask to elite</h3>
-            <p class="box-desc">We are comming soon...</p>
-            	<div class="contact-section">
-            		
-                		<form>
-                    		<input type="text" name="Name" placeholder="Name" />
-                        	<input type="email" name="email" placeholder="Email"/>
-							<textarea placeholder="Thread" rows="2"></textarea>
-                        	<button type="submit" class="submit">Raise <p class="quotes"> and help us </p></button>
-                   		</form>
-                	
-            	</div>
-        </div>
-    </div>
-    <div class="color-border">
-    </div>
-    <div class="footer">
-        	<div class="container">
-            	<div class="infooter">
-                <p class="copyright">Copyright &copy; EliteOFIndia</a></p>
-            	</div>
-            <ul class="socialmedia">
-                <li><a href=""><i class="icon-twitter"></i></a></li>
-                <li><a href=""><i class="icon-facebook"></i></a></li>
-                <li><a href=""><i class="icon-dribbble"></i></a></li>
-                <li><a href=""><i class="icon-linkedin"></i></a></li>
-                <li><a href=""><i class="icon-instagram"></i></a></li>
-            </ul>
-            </div>
-        </div>
-        <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-        <script type="text/javascript">		
-			 $(document).ready(function() {
-				$('#simple-menu').sidr({
-				side: 'right'
-			});
-			});
-			$('.responsive-menu-button').sidr({
-				name: 'sidr-main',
-				source: '#navigation',
-				side: 'right'
+      <noscript>
+        <div class="nojs">Javascript is either disabled or not supported in your browser. Please enable it or use a Javascript enabled browser.</div>
+      </noscript>
 
-				});
-			$(document).ready(
-			function() {
-			$("html").niceScroll({cursorborder:"0px solid #fff",cursorwidth:"5px",scrollspeed:"70"});
-			}
-			);
-		</script>
-</body>
+      <div class="animated zoomInRight">
+        <div class="input-group search-bar">
+          <input type="text" ng-model="search" ng-model-options="{ debounce: 800 }" onclick="select()" class="form-control" placeholder="Enter full movie name" autofocus />
+          <span class="input-group-addon bar-style"><i class="glyphicon glyphicon-search"></i></span>
+        </div>
+
+        <div id="main-info" ng-include="'partials/main-info.html'" class="col-md-8"></div>
+
+        <div id="related-results" ng-include="'partials/related-results.html'" class="col-md-4 animated bounce related-results"></div>
+      </div>
+    </div>
+	
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
