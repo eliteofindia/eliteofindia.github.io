@@ -1,14 +1,10 @@
-fastr
+ELITE OF INDIA (inspire by vision)
 ==
 
 A Quicker solution for browsing movies and TV shows!
 
-![screenshot](https://raw.github.com/jonnyhsy/fastr/master/Fastr-Movie-Browser.png)
-
-Code from SitePoint article "Making API Calls in AngularJS using Angular's $http service"
-
-Article URL: http://www.sitepoint.com/api-calls-angularjs-http-service
+![screenshot](https://raw.github.com/jonnyhsy/fastr/master/Elite-Movie-Surfer.png)
 
 ### License ###
 
-[MIT License (MIT)](https://github.com/tanay1337/fastr/blob/master/LICENSE)
+[License](https://github.com/tanay1337/fastr/blob/master/LICENSE)
