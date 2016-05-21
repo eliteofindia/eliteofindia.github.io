@@ -7,4 +7,4 @@ A Quicker solution for browsing movies and TV shows!
 
 ### License ###
 
-[License](https://github.com/tanay1337/fastr/blob/master/LICENSE)
+[License](https://github.com/eliteofindia/eliteofindia.github.io/edit/master/LICENSE)
