@@ -3,8 +3,8 @@
 </div>
 
 <div ng-if="details.Response==='True'">
-  <img src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}" class="thumbnail animated flip movie-poster">
-  <!--<img ng-src="../images/EliteOfIndia.JPG" class="thumbnail animated flip movie-poster">-->
+  <!--<img src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}" class="thumbnail animated flip movie-poster">-->
+  <img ng-src="../images/EliteOfIndia.JPG" class="thumbnail animated flip movie-poster">
   <span class="span-outer">
     <a href="http://imdb.com/title/{{ details.imdbID }}" target="_blank">{{ details.Title }}</a>
   </span>, {{ details.Year }}
