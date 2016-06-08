@@ -20,7 +20,12 @@
           <div class="navbar-header">
 			<img class="navbar-brand" src = "images/EliteOfIndia.JPG" height="50px" width="50px"/> 
 			<a class="navbar-brand" href="#"> <b>ELITE</b> <span class="span-style">Movie Surfer</span></a>
-          </div>
+		  </div>
+		  <ul class="nav navbar-nav navbar-right">
+			  <li><a href="#"><span class="span-style">Hits : {{ hits }}</span></a></li>
+			  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		  </ul>
         </div>
       </nav>
       <noscript>
@@ -32,15 +37,12 @@
           <input type="text" ng-model="search" ng-model-options="{ debounce: 800 }" onclick="select()" class="form-control" placeholder="Enter full movie name" autofocus />
           <span class="input-group-addon bar-style"><i class="glyphicon glyphicon-search"></i></span>
         </div>
-
         <div id="main-info" ng-include="'partials/main-info.html'" class="col-md-8"></div>
-
         <div id="related-results" ng-include="'partials/related-results.html'" class="col-md-4 animated bounce related-results"></div>
       </div>
 		<nav class="navbar navbar-inverse navbar-fixed-bottom">
 			<div class="copyrights"><b>&copy;</b><span class="span-style">&nbsp;eliteofindia.club &nbsp;{{ theTime }}</span></div>
-		</nav>
-	
+		</nav>	
     </div>
   </body>
 </html>
