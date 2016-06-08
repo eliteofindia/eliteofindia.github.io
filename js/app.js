@@ -20,8 +20,11 @@ var app = angular.module('myApp', []);
       $http.get("http://www.omdbapi.com/?s=" + $scope.search, {cache: false})
       .then(function(response){ $scope.related = response.data; });
 	  
-	  $http.get("http://exp-expservices.rhcloud.com/hits", {cache: false})
-      .then(function(response){ $scope.hits = response.data; }, function(response){console.log(response);});
+	  $http({
+		  method: "GET",
+		  url: "http://exp-expservices.rhcloud.com/hits"
+	  })
+	  .then(function(response){ $scope.hits = response.data.hits; }, function(response){console.log(response);});
 
     }
 
