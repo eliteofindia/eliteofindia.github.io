@@ -160,7 +160,7 @@ ul.rel-results {
 .button-section ul li
 {
 	display: inline-block;
-	margin: 50px 20px;
+	margin: 20px 20px;
 }
 
 .top-button
@@ -175,6 +175,6 @@ ul.rel-results {
 }
 .green
 {	color: #fff;
-	padding: 17px 30px;
+	padding: 17px 17px;
 	background-color: #64AE3C;
 }
