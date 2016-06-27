@@ -5,7 +5,7 @@ var app = angular.module('myApp', ['ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     // Home
-    .when("/", {templateUrl: "partials/home.html", controller: "MovieController"})
+    .when("/", {templateUrl: "partials/home.html", controller: "HomeController"})
     // Pages
 	.when("/surfer", {templateUrl: "partials/surfer.html", controller: "MovieController"})
     .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
@@ -19,6 +19,14 @@ app.config(['$routeProvider', function ($routeProvider) {
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
+
+app.controller('HomeController',function($scope, $http){
+	
+	$http.get("http://exp-expservices.rhcloud.com/hits", {cache: false})
+	  .then(function(response){ $scope.hits = response.data.hits; console.log(response.data.hits);}, function(response){console.log(response);});
+	
+});
+
 
   app.controller('MovieController',function($scope, $http, $interval){
     $scope.$watch('search', function() {
@@ -39,7 +47,7 @@ app.config(['$routeProvider', function ($routeProvider) {
       .then(function(response){ $scope.related = response.data; });
 	  
 	  $http.get("http://exp-expservices.rhcloud.com/hits", {cache: false})
-	  .then(function(response){ $scope.hits = response.data.hits; }, function(response){console.log(response);});
+	  .then(function(response){ $scope.hits = response.data.hits; console.log(response.data.hits);}, function(response){console.log(response);});
 
     }
 
