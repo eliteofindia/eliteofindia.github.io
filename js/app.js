@@ -46,8 +46,8 @@ app.controller('HomeController',function($scope, $http){
       $http.get("http://www.omdbapi.com/?s=" + $scope.search, {cache: false})
       .then(function(response){ $scope.related = response.data; });
 	  
-	  $http.get("http://exp-expservices.rhcloud.com/hits", {cache: false})
-	  .then(function(response){ $scope.hits = response.data.hits; console.log(response.data.hits);}, function(response){console.log(response);});
+	  /*$http.get("http://exp-expservices.rhcloud.com/hits", {cache: false})
+	  .then(function(response){ $scope.hits = response.data.hits; console.log(response.data.hits);}, function(response){console.log(response);});*/
 
     }
 
