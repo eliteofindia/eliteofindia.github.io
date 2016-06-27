@@ -134,8 +134,12 @@ ul.rel-results {
 
 .container
 {
-	width: 1080px;
+	padding: 150px 0px;
+	cursor: default;
+	width: 100%;
 	margin: 0 auto;
+	border-width: 5px;
+	border-style: solid;
 }
 
 .small-text
