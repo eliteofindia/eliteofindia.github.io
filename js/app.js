@@ -22,8 +22,8 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 app.controller('HomeController',function($scope, $http){
 	
-	$http.get("http://exp-expservices.rhcloud.com/hits", {cache: false})
-	  .then(function(response){ $scope.hits = response.data.hits; console.log(response.data.hits);}, function(response){console.log(response);});
+		$http.get("http://exp-expservices.rhcloud.com/hits", {cache: false})
+		  .then(function(response){ $scope.hits = response.data.hits; console.log(response.data.hits);}, function(response){console.log(response);});
 	
 });
 
@@ -37,7 +37,7 @@ app.controller('HomeController',function($scope, $http){
 	  $interval(function () {
 		  $scope.theTime = new Date().toLocaleTimeString();
 	  }, 1000);
-	  
+	
     $scope.search = "Sherlock Holmes";
     function fetch(){
       $http.get("http://www.omdbapi.com/?t=" + $scope.search +"&tomatoes=true&plot=full", {cache: false})
