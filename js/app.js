@@ -59,4 +59,20 @@ app.controller('HomeController',function($scope, $http){
       this.setSelectionRange(0, this.value.length);
     }
   });
+  app.directive("btnAutoCollapse",directive);
+  
+  function directive() {
+  var dir = {
+    restrict: 'A',
+    scope: {},
+    link: link
+  };
+  return dir;
+
+  function link(scope, element, attrs) {    
+    element.on('click', function(event) {              
+      $(".navbar-collapse").collapse('hide');
+    });
+  }
+}
   
