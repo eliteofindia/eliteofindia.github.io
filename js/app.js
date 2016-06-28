@@ -40,10 +40,10 @@ app.controller('HomeController',function($scope, $http){
 	
     $scope.search = "Sherlock Holmes";
     function fetch(){
-      $http.get("http://exp-expservices.rhcloud.com/maininfo/" + $scope.search, {cache: false})
+      $http.get("http://services.eliteofindia.club/maininfo/" + $scope.search, {cache: false})
       .then(function(response){ $scope.details = response.data; });
 
-      $http.get("http://exp-expservices.rhcloud.com/relatedinfo/" + $scope.search, {cache: false})
+      $http.get("http://services.eliteofindia.club/relatedinfo/" + $scope.search, {cache: false})
       .then(function(response){ $scope.related = response.data; });
 	  
 	  /*$http.get("http://exp-expservices.rhcloud.com/hits", {cache: false})
