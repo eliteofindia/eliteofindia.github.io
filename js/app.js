@@ -23,7 +23,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 app.controller('HomeController',function($scope, $http){
 	
 		$http.get("http://services.eliteofindia.club/hits", {cache: false})
-		  .then(function(response){ $scope.hits = response.data.hits; console.log(response.data.hits);}, function(response){console.log(response);});
+		  .then(function(response){ $scope.hits = response.data.hits; console.log(response);}, function(response){console.log(response);});
 	
 });
 
