@@ -22,7 +22,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 app.controller('HomeController',function($scope, $http){
 	
-		$http.get("http://exp-expservices.rhcloud.com", {cache: false})
+		$http.get("http://exp-expservices.rhcloud.com/live", {cache: false})
 		  .then(function(response){ console.log("Services are up and running");}, 
 		  function(response){$scope.hits = "Service Down"; console.log(response);});
 	
@@ -45,7 +45,7 @@ app.controller('HomeController',function($scope, $http){
     $scope.search = "Sherlock Holmes";
     function fetch(){
 		
-		$http.get("http://exp-expservices.rhcloud.com", {cache: false})
+		$http.get("http://exp-expservices.rhcloud.com/live", {cache: false})
 		.then(function(response){ console.log("Services are up and running");}, 
 		function(response){console.log(response);});
 		
