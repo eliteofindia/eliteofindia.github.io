@@ -22,6 +22,10 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 app.controller('HomeController',function($scope, $http){
 	
+		$http.get("http://exp-expservices.rhcloud.com", {cache: false})
+		  .then(function(response){ console.log("Services are up and running");}, 
+		  function(response){$scope.hits = "Service Down"; console.log(response);});
+	
 		$http.get("http://services.eliteofindia.club/hits", {cache: false})
 		  .then(function(response){ $scope.hits = response.data.hits; console.log(response);}, function(response){console.log(response);});
 	
@@ -40,6 +44,11 @@ app.controller('HomeController',function($scope, $http){
 	
     $scope.search = "Sherlock Holmes";
     function fetch(){
+		
+		$http.get("http://exp-expservices.rhcloud.com", {cache: false})
+		.then(function(response){ console.log("Services are up and running");}, 
+		function(response){console.log(response);});
+		
       $http.get("http://services.eliteofindia.club/maininfo/" + $scope.search, {cache: false})
       .then(function(response){ $scope.details = response.data; });
 
