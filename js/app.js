@@ -1,5 +1,6 @@
 'use strict';
 var getcount = true;
+var count;
 var app = angular.module('myApp', ['ngRoute']);
 
 app.config(['$routeProvider', function ($routeProvider) {
@@ -26,10 +27,13 @@ app.controller('HomeController',function($scope, $http){
 		  .then(function(response){ console.log("Services are up and running");}, 
 		  function(response){$scope.hits = "Service Down"; console.log(response);});
 		console.log(getcount);
-		
+		console.log(count);
 		if(getcount == true){
 			$http.get("http://services.eliteofindia.club/hits", {cache: false})
-			  .then(function(response){ $scope.hits = response.data.hits; getcount=false;console.log(response);}, function(response){console.log(response);});
+			  .then(function(response){ count = $scope.hits = response.data.hits; getcount=false;console.log(response);}, function(response){console.log(response);});
+		}
+		else{
+			$scope.hits = count;
 		}
 	
 });
