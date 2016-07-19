@@ -1,3 +1,4 @@
+'use strict';
 var getcount = true;
 var count;
 var app = angular.module('myApp', ['ngRoute']);
@@ -74,20 +75,22 @@ app.controller('HomeController',function($scope, $http){
       this.setSelectionRange(0, this.value.length);
     }
   });
-  app.directive("btnAutoCollapse",directive);
-  
-  function directive() {
-  var dir = {
-    restrict: 'A',
-    scope: {},
-    link: link
-  };
-  return dir;
+  app.directive("btnAutoCollapse",function() {
+	  var dir = {
+		restrict: 'A',
+		scope: {},
+		link: link
+	  };
+	  return dir;
 
-  function link(scope, element, attrs) {    
-    element.on('click', function(event) {              
-      $(".navbar-collapse").collapse('hide');
-    });
-  }
+	  function link(scope, element, attrs) {    
+		element.on('click', function(event) {              
+		  $(".navbar-collapse").collapse('hide');
+		});
+	  }
 }
+  
+  
+  );
+  
   
