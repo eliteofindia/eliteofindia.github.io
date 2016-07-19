@@ -18,7 +18,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
     .when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
     // else 404
-    .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
+    .otherwise("/", {templateUrl: "partials/home.html", controller: "HomeController"});
 }]);
 
 app.controller('HomeController',function($scope, $http){
@@ -75,22 +75,20 @@ app.controller('HomeController',function($scope, $http){
       this.setSelectionRange(0, this.value.length);
     }
   });
-  app.directive("btnAutoCollapse",function() {
-	  var dir = {
-		restrict: 'A',
-		scope: {},
-		link: link
-	  };
-	  return dir;
+  app.directive("btnAutoCollapse",directive);
+  
+  function directive() {
+  var dir = {
+    restrict: 'A',
+    scope: {},
+    link: link
+  };
+  return dir;
 
-	  function link(scope, element, attrs) {    
-		element.on('click', function(event) {              
-		  $(".navbar-collapse").collapse('hide');
-		});
-	  }
+  function link(scope, element, attrs) {    
+    element.on('click', function(event) {              
+      $(".navbar-collapse").collapse('hide');
+    });
+  }
 }
-  
-  
-  );
-  
   
