@@ -1,4 +1,3 @@
-'use strict';
 var getcount = true;
 var count;
 var app = angular.module('myApp', ['ngRoute']);
