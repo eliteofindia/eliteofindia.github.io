@@ -23,13 +23,14 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 app.controller('HomeController',function($scope, $http){
 	
-		$http.get("http://exp-expservices.rhcloud.com/live", {cache: false})
+		/*$http.get("http://exp-expservices.rhcloud.com/live", {cache: false})
 		  .then(function(response){ console.log("Services are up and running");}, 
-		  function(response){$scope.hits = "Service Down"; console.log(response);});
+		  function(error){$scope.hits = "Please refresh"; console.log(error);});*/
+		  
 		console.log(getcount);
 		console.log(count);
 		if(getcount == true){
-			$http.get("http://services.eliteofindia.club/hits", {cache: false})
+			$http.get("http://ashishawasthi.pythonanywhere.com/hits", {cache: false})
 			  .then(function(response){ count = $scope.hits = response.data.hits; getcount=false;console.log(response);}, function(response){console.log(response);});
 		}
 		else{
@@ -52,14 +53,14 @@ app.controller('HomeController',function($scope, $http){
     $scope.search = "Sherlock Holmes";
     function fetch(){
 		
-		$http.get("http://exp-expservices.rhcloud.com/live", {cache: false})
+		/*$http.get("http://exp-expservices.rhcloud.com/live", {cache: false})
 		.then(function(response){ console.log("Services are up and running");}, 
-		function(response){console.log(response);});
+		function(response){console.log(response);});*/
 		
-      $http.get("http://services.eliteofindia.club/maininfo/" + $scope.search, {cache: false})
+      $http.get("http://ashishawasthi.pythonanywhere.com/maininfo/" + $scope.search, {cache: false})
       .then(function(response){ $scope.details = response.data; });
 
-      $http.get("http://services.eliteofindia.club/relatedinfo/" + $scope.search, {cache: false})
+      $http.get("http://ashishawasthi.pythonanywhere.com/relatedinfo/" + $scope.search, {cache: false})
       .then(function(response){ $scope.related = response.data; });
 	  
 	  /*$http.get("http://exp-expservices.rhcloud.com/hits", {cache: false})
