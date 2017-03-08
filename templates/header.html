@@ -79,6 +79,20 @@
   }
 </script>
 
+
+<!--
+Below we include the Login Button social plugin. This button uses
+the JavaScript SDK to present a graphical Login button that triggers
+the FB.login() function when clicked.
+-->
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 	  <div class="navbar-header">
@@ -95,19 +109,7 @@
 			  <li><a href="#/surfer" btn-auto-collapse><span class="glyphicon glyphicon-log-in"></span> Surfer</a></li>
 			  <li><a href="#/" btn-auto-collapse ><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 			  <li><a href="#/" btn-auto-collapse><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-			  <li>
-				  <!--
-				  Below we include the Login Button social plugin. This button uses
-				  the JavaScript SDK to present a graphical Login button that triggers
-				  the FB.login() function when clicked.
-				-->
-
-				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-				</fb:login-button>
-
-				<div id="status">
-				</div>
-			  </li>
+			  
 		  </ul>
 	  </div>
 	</div>
