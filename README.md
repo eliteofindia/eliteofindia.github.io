@@ -1,9 +1,7 @@
 ELITE OF INDIA (inspire by vision)
 ==
 
-A Quicker solution for browsing movies and TV shows!
-
-![screenshot](https://github.com/eliteofindia/eliteofindia.github.io/blob/master/Elite-Movie-Surfer.png)
+This Application is under development.
 
 ### License ###
 
