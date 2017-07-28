@@ -30,7 +30,7 @@ app.controller('HomeController',function($scope, $http){
 		console.log(getcount);
 		console.log(count);
 		if(getcount == true){
-			$http.get("http://ashishawasthi.pythonanywhere.com/hits", {cache: false})
+			$http.get("https://ashishawasthi.pythonanywhere.com/hits", {cache: false})
 			  .then(function(response){ count = $scope.hits = response.data.hits; getcount=false;console.log(response);}, function(response){console.log(response);});
 		}
 		else{
